@@ -4,10 +4,12 @@
   "description": "Phodal's new Markdown Editor",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "tsc && stencil build",
+    "watch": "stencil build --es5 --dev --watch --serve",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "npm run build && electron ./dist/main.js"
+    "start": "npm run build && electron ./dist/main.js",
+    "test": "jest",
+    "test.watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,24 @@
   },
   "homepage": "https://github.com/phodal/phodit#readme",
   "devDependencies": {
-    "electron": "^2.0.5"
-  },
-  "dependencies": {
+    "@stencil/core": "^0.10.6",
+    "@types/jest": "^23.1.6",
+    "electron": "^2.0.5",
+    "jest": "^23.4.1",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
   }
 }

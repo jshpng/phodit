@@ -1,17 +1,28 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2015",
+      "es2017"
+    ],
+    "moduleResolution": "node",
     "module": "commonjs",
-    "noImplicitAny": true,
-    "sourceMap": true,
+    "target": "es2015",
+    "noUnusedLocals": true,
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "node_modules/*"
-      ]
-    }
+    "noUnusedParameters": true,
+    "jsx": "react",
+    "jsxFactory": "h"
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "types/jsx.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
