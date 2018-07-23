@@ -20,15 +20,15 @@ const simplemde = new (window as any).SimpleMDE({
   element: document.getElementById("input-section"),
 });
 
-window.document.addEventListener("phodit.editor.open.guide", (data) => {
+window.document.addEventListener("phodit.editor.open.guide", (data: any) => {
   ipcRenderer.send("phodit.open.guide", simplemde.value());
 });
 
-window.document.addEventListener("phodit.editor.fullscreen", (data) => {
+window.document.addEventListener("phodit.editor.fullscreen", (data: any) => {
   ipcRenderer.send("phodit.fullscreen");
 });
 
-window.document.addEventListener("phodit.editor.unfullscreen", (data) => {
+window.document.addEventListener("phodit.editor.unfullscreen", (data: any) => {
   ipcRenderer.send("phodit.unfullscreen");
 });
 

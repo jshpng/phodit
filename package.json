@@ -21,11 +21,17 @@
   },
   "homepage": "https://github.com/phodal/phodit#readme",
   "devDependencies": {
+    "awesome-typescript-loader": "^5.2.0",
     "devtron": "^1.4.0",
     "electron": "^2.0.5",
     "electron-packager": "^12.1.0",
+    "file-loader": "^1.1.11",
+    "node-loader": "^0.6.0",
+    "source-map-loader": "^0.2.3",
     "tslint": "^5.10.0",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
   },
   "dependencies": {
     "comlinkjs": "^3.0.3",

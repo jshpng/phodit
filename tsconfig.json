@@ -1,11 +1,21 @@
 {
+  "files": [],
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",
     "noImplicitAny": true,
-    "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "target": "es6",
+    "target": "es5",
+    "types": ["node"],
+    "sourceMap": true,
+    "lib": [
+      "dom",
+      "es5",
+      "webworker",
+      "es6",
+      "scripthost"
+    ],
     "paths": {
       "*": [
         "node_modules/*"
@@ -14,5 +24,8 @@
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/*"
   ]
 }
